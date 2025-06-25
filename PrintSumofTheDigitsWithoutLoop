@@ -1,0 +1,19 @@
+//Sum of the digits
+
+#include <stdio.h>
+
+int main() {
+    int x,y;
+    printf("Enter a number :");
+    scanf("%d",&x);
+    y=0;
+SUM:
+    if (x!=0) {
+    y = y+x%10;
+    x=x/10;
+    goto SUM;
+    }
+    printf("Result = %d",y);
+
+    return 0;
+}
