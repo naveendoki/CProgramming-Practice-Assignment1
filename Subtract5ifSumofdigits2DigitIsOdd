@@ -1,0 +1,11 @@
+// Subtract 5 if sum of digits in 2 digit number is odd
+#include <stdio.h>
+
+int main() {
+    int x,y;
+    printf("Enter a number :");
+    scanf("%d",&x);
+    y = x- 5*((x/10+x%10)%2);
+    printf("Result = %d",y);
+    return 0;
+}
