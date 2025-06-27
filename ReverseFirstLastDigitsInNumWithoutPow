@@ -1,0 +1,28 @@
+// Reverse 1st and last digit in a num
+#include <stdio.h>
+int main() {
+    int x,y=0,c=0, temp, divisor=1,first=1;
+    printf("Enter a number :");
+    scanf("%d",&x);
+    temp =x;
+loop:
+    if (temp!=0) {    
+        if (c==0) {
+            y = temp/10;
+            first = temp%10;
+        } else {
+            divisor = divisor*10; 
+            first = first *10;
+        }
+        if (temp<10) {
+            y=y%((divisor/10));
+            y = (first) + (y*10) + temp;
+        }
+        temp=temp/10;
+        c++;
+        goto loop;
+    }
+
+    printf("Final Num = %d", y);
+    return 0;
+}
